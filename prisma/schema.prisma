@@ -12,3 +12,13 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model feedbackTable{
+  id String @id @default(uuid())
+  name String @map("name")
+  email String @map("email")
+  phoneNumber Int @map("phoneNumber")
+  topic String @map("topic")
+  explanation String @map("explanation")
+  date DateTime @map("date")
+}
